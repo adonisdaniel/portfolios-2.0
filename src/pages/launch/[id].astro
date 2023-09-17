@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getLaunchById } from "../../services/space-x";
+
+export const prerender = false; //A partir de aca es server
+
+const { id } = Astro.params;
+
+let launch;
+
+if (id) {
+  launch = await getLaunchById(id);
+}
+---
+
+<Layout title={`Lanzamiento: ${"5eb87ce0ffd86e000604b332"}`}>
+  <article>
+    {launch.id}
+  </article>
+</Layout>
