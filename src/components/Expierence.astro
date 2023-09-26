@@ -1,0 +1,34 @@
+---
+import Section from "../layouts/Section.astro";
+import ExpierenceItem from "./ExpierenceItem.astro";
+
+const items = [
+  {
+    title: "Jackpot Media",
+    current: true,
+    time: "From October, 2022",
+    description: "Full stack developer.",
+  },
+  {
+    title: "Freelance",
+    current: false,
+    time: "2020 - 2022",
+    description: "Frontend developer.",
+  },
+];
+---
+
+<Section title="Expierence" alternative={true}>
+  <ol class="relative border-l border-gray-700">
+    {
+      items.map(({ title, current, time, description }) => (
+        <ExpierenceItem
+          title={title}
+          current={current}
+          time={time}
+          description={description}
+        />
+      ))
+    }
+  </ol>
+</Section>

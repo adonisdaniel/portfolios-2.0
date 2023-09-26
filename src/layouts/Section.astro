@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  alternative: boolean;
+}
+
+const { title, alternative } = Astro.props;
+---
+
+<section
+  class="min-h-screen flex flex-col p-10 rounded"
+  class:list={{ ["bg-gray-950"]: alternative }}>
+  <h2 class="text-3xl text-center mb-24 font-bold">{title}</h2>
+  <slot />
+</section>
