@@ -37,13 +37,32 @@ import HeaderButton from "./HeaderButton.astro";
       </svg>
     </button>
     <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
-      <HeaderButton href="/">
+      <HeaderButton href="#resume">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#2c3e50"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 16l6 -7l5 5l5 -6"></path>
+          <path d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        </svg>
+         Resume
+      </HeaderButton>
+      <HeaderButton href="#projects">
         <svg
           slot="before"
           xmlns="http://www.w3.org/2000/svg"
-          class="stroke-current hover:stroke-emerald-900"
-          width="44"
-          height="44"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="#2c3e50"
@@ -65,13 +84,12 @@ import HeaderButton from "./HeaderButton.astro";
         </svg>
          Projects
       </HeaderButton>
-      <HeaderButton href="/">
+      <HeaderButton href="#stack">
         <svg
           slot="before"
           xmlns="http://www.w3.org/2000/svg"
-          class="stroke-current hover:stroke-emerald-900"
-          width="44"
-          height="44"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="#2c3e50"
@@ -85,13 +103,12 @@ import HeaderButton from "./HeaderButton.astro";
         </svg>
          Stack
       </HeaderButton>
-      <HeaderButton href="/">
+      <HeaderButton href="#contact">
         <svg
           slot="after"
           xmlns="http://www.w3.org/2000/svg"
-          class="stroke-current hover:stroke-emerald-900"
-          width="44"
-          height="44"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="#2c3e50"
@@ -110,10 +127,9 @@ import HeaderButton from "./HeaderButton.astro";
       <HeaderButton href="/about">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="stroke-current hover:stroke-emerald-900"
           slot="after"
-          width="44"
-          height="44"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="#2c3e50"

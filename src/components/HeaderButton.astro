@@ -2,11 +2,13 @@
 interface Props {
   href: string;
 }
+
+const { href } = Astro.props;
 ---
 
 <a
   class="flex-row justify-center text-white cursor-pointer font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 transition-all duration-200 ease-in-out scale-90 hover:scale-95 gap-x-2 opacity-80 hover:opacity-100 hover:underline decoration-wavy decoration-emerald-800 decoration-2 underline-offset-4"
-  href="href">
+  href={href}>
   <slot name="before" />
   <slot>Default text</slot>
   <slot name="after" />

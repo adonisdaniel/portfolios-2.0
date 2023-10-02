@@ -1,5 +1,28 @@
 ---
 import Section from "../layouts/Section.astro";
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Cocktails app",
+    description:
+      "This is an app to search and save your favorites cocktails. Here you can find the instructions and ingredients for make them. Web site created using create-react-app.",
+    techs: ["REACT JS", "BOOSTRAP"],
+  },
+  {
+    title: "Otra vaina",
+    description:
+      "This is an app to search and save your favorites cocktails. Here you can find the instructions and ingredients for make them. Web site created using create-react-app.",
+    techs: ["VUE", "TAILWIND"],
+  },
+];
 ---
 
-<Section title="Projects" alternative={false} />
+<Section title="Projects" alternative={false} idSection="projects">
+  {
+    projects.length &&
+      projects.map(({ title, description, techs }) => (
+        <ProjectCard title={title} description={description} techs={techs} />
+      ))
+  }
+</Section>

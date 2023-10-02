@@ -2,14 +2,18 @@
 interface Props {
   title: string;
   alternative: boolean;
+  idSection: string;
 }
 
-const { title, alternative } = Astro.props;
+const { title, alternative, idSection } = Astro.props;
 ---
 
 <section
   class="min-h-screen flex flex-col p-10 rounded"
-  class:list={{ ["bg-gray-950"]: alternative }}>
+  class:list={{ ["bg-gray-950"]: alternative }}
+  id={idSection}>
   <h2 class="text-3xl text-center mb-24 font-bold">{title}</h2>
-  <slot />
+  <div class="grid grid-flow-col-dense">
+    <slot />
+  </div>
 </section>
